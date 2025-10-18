@@ -1,14 +1,21 @@
-import { PiSparkleFill } from "react-icons/pi";
-import unity  from "../img/unity.jpg";
+import { FaHandHoldingHeart, FaPrayingHands } from "react-icons/fa";
+import unity from "../img/unity.jpg";
+import educational from "../img/education.jpg";
+import discipleship from "../img/discipleship.webp";
+import livelihood from "../img/livelihood.jpg";
+import emergencyAid from "../img/emergencyAid.jpg";
+import { Card } from "../components/Card";
+import { FaHandsHolding } from "react-icons/fa6";
 
 export const HomePage = () => {
   return (
     <div className=" space-y-12">
-      <div className="w-dvw bg-neutral-300 h-[300px] flex flex-col items-start px-6 md:px-28  gap-4 justify-center">
+      <div className="hero-header w-dvw bg-neutral-300 h-[300px] flex flex-col items-start px-6 md:px-28  gap-2 justify-center">
         <h1 className="font-bold text-5xl text-primary-foreground">
-          Bridge of Grace
+          Bridge of Grace Ministry
         </h1>
-        <button className="bg-purple px-4 py-2 rounded-md text-primary-foreground cursor-pointer">
+        <p className="text-primary-foreground text-lg">Every child deserves a path from poverty</p>
+        <button className="bg-purple hover:bg-purple-foreground transition-colors duration-300 ease-in-out px-4 py-2 rounded-md text-primary-foreground cursor-pointer">
           Learn About Us
         </button>
       </div>
@@ -18,16 +25,16 @@ export const HomePage = () => {
           Welcome to Bridge of Grace
         </h1>
         <div className="flex flex-col md:flex-row items-start gap-6">
-            <div className="w-auto md:w-[800px] h-[350px] object-cover overflow-hidden rounded-md bg-amber-100">
-                <img
-                src={unity}
-                alt="Bridge of Grace"
-                className="rounded-md object-cover w-full h-full"
-                width={300}
-                height={350}
+          <div className="w-auto md:w-[800px] h-[350px] object-cover overflow-hidden rounded-md bg-amber-100">
+            <img
+              src={unity}
+              alt="Bridge of Grace"
+              className="rounded-md object-cover w-full h-full"
+              width={300}
+              height={350}
             />
-            </div>
-    
+          </div>
+
           <span>
             <p className="text-lg leading-relaxed">
               Bridge of Grace is a Christ-centered initiative birthed by{" "}
@@ -56,39 +63,36 @@ export const HomePage = () => {
 
       <section>
         <div className="bg-purple p-6">
-          <h1 className="text-4xl text-primary-foreground font-bold text-center">
-            Made possible by God’s grace and your support, we provide:
+          <h1 className="text-3xl md:text-4xl text-primary-foreground font-bold text-center">
+            Made possible by God&apos;s grace and your support, we provide:
           </h1>
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-4 px-8 md:px-30 py-12 ">
-          <div className="bg-teal rounded-md overflow-hidden">
-            <img src="https://placehold.co/800x800" alt="Bridge of Grace" />
-            <h1 className="flex items-center text-primary-foreground text-xl p-2 px-4 gap-2">
-              <span className="text-4xl font-bold">1</span> Educational
-              Assistance
-            </h1>
-          </div>
-          <div className="bg-teal rounded-md overflow-hidden">
-            <img src="https://placehold.co/800x800" alt="Bridge of Grace" />
-            <h1 className="flex items-center text-primary-foreground text-xl p-2 px-4 gap-2 leading-5">
-              <span className="text-4xl font-bold">2</span> Livelihood Training
-              Assistance
-            </h1>
-          </div>
-          <div className="bg-teal rounded-md overflow-hidden">
-            <img src="https://placehold.co/800x800" alt="Bridge of Grace" />
-            <h1 className="flex items-center text-primary-foreground text-xl p-2 px-4 gap-2 leading-5">
-              <span className="text-4xl font-bold">3</span> Emergency Aid
-            </h1>
-          </div>
-          <div className="bg-teal rounded-md overflow-hidden">
-            <img src="https://placehold.co/800x800" alt="Bridge of Grace" />
-            <h1 className="flex items-center text-primary-foreground text-xl p-2 px-4 gap-2 leading-5">
-              <span className="text-4xl font-bold">4</span> Discipleship and
-              Faith Formation
-            </h1>
-          </div>
+         <Card
+            title="Educational Assistance"
+            image={educational}
+            number="1"
+            description="Empowering children through education and faith"
+          />
+          <Card
+            title="Livelihood Training Assistance"
+            image={livelihood}
+            number="2"
+            description="Empowering children through livelihood training and faith"
+          />
+          <Card
+            title="Emergency Aid Assistance"
+            image={emergencyAid}
+            number="3"
+            description="Empowering children through emergency aid and faith"
+          />
+          <Card
+            title="Discipleship and Faith Formation"
+            image={discipleship}
+            number="4"
+            description="Empowering children through discipleship and faith formation"
+          />
         </div>
       </section>
 
@@ -132,7 +136,7 @@ export const HomePage = () => {
         </h1>
         <div className="space-y-8 px-8 md:px-16">
           <div className="flex flex-col md:flex-row gap-2">
-            <PiSparkleFill className="text-primary-foreground bg-purple p-2 rounded-full w-10 h-10" />
+            <FaHandHoldingHeart className="text-primary-foreground bg-purple p-2 rounded-full w-10 h-10" />
             <span className="flex flex-col">
               <h3 className="text-2xl font-bold">Sponsor a child</h3>
               <p className="text-lg text-muted-foreground">
@@ -142,7 +146,7 @@ export const HomePage = () => {
             </span>
           </div>
           <div className="flex flex-col md:flex-row gap-2">
-            <PiSparkleFill className="text-primary-foreground bg-purple p-2 rounded-full w-10 h-10" />
+            <FaHandsHolding className="text-primary-foreground bg-purple p-2 rounded-full w-10 h-10" />
             <span className="flex flex-col">
               <h3 className="text-2xl font-bold">Support a family</h3>
               <p className="text-lg text-muted-foreground">
@@ -152,7 +156,7 @@ export const HomePage = () => {
             </span>
           </div>
           <div className="flex flex-col md:flex-row gap-2">
-            <PiSparkleFill className="text-primary-foreground bg-purple p-2 rounded-full w-10 h-10" />
+            <FaPrayingHands className="text-primary-foreground bg-purple p-2 rounded-full w-10 h-10" />
             <span className="flex flex-col">
               <h3 className="text-2xl font-bold">Invest in Discipleship</h3>
               <p className="text-lg text-muted-foreground">

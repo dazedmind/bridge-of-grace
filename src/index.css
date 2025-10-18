@@ -165,8 +165,23 @@ input[type=number] {
   background-repeat: no-repeat;
 }
 
+.hero-header {
+  width: 100dvw;
+  height: 400px;
+  background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent),
+    url('img/bridge-of-grace.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 @media screen and (max-width: 768px) {
   .bridge-header {
     height: 200px;
+  }
+
+  .hero-header {
+    height: 400px;
   }
 }
